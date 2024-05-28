@@ -115,7 +115,7 @@ const deleteCourse = asyncHandler(async (req, res, next) => {
       )
     );
 
-  await Course.deleteOne({ _id: req.params.id });
+  await course.deleteOne();
 
   res.status(200).json({
     success: true,
